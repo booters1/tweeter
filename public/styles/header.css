@@ -1,0 +1,25 @@
+/* header.css */
+
+/* Style the <header> element */
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #00bee0; /* Background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  padding-top: 140px;
+}
+
+/* Style the avatar */
+header img {
+  width: 150px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make it circular */
+}
+
+/* Style the name */
+header h2 {
+  margin-top: 20px; /* Add spacing between avatar and name */
+}
