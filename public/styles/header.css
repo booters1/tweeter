@@ -2,11 +2,12 @@ header {
   height: 400px;
   width: 100%;
   background-color: #00bee0; 
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
   display: flex;
   flex-direction: column;
   justify-content: center; 
   align-items: center; 
-  padding-top: 140px;
+
 }
 
 /*avatar*/
