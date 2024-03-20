@@ -15,6 +15,10 @@
   font-family: 'Bungee', sans-serif; 
 }
 
+.new-tweet .counter.over-limit {
+  color: red; 
+}
+
 .new-tweet button {
   margin-top: 10px;
   padding: 8px 16px;
