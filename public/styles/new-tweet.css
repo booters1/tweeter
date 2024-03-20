@@ -1,0 +1,31 @@
+.new-tweet {
+  text-align: left;
+}
+
+.new-tweet textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc; 
+  box-sizing: border-box; 
+}
+
+.new-tweet .counter {
+  float: right;
+  font-family: 'Bungee', sans-serif; 
+}
+
+.new-tweet button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4056A1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Bungee', sans-serif; 
+}
+
+.new-tweet button:hover {
+  background-color: #344b8e;
+}
