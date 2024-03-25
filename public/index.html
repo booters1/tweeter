@@ -49,26 +49,47 @@
           <h2>Your Name</h2>
       </div>
   </header>
+  
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- Form section -->
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h3>What are you humming about?</h3>
         <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
+          <textarea name="text" id="tweet-text" placeholder="Tweet here!"></textarea>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-    </p>
-    <p>
-        Phasellus euismod, mauris eu posuere blandit, neque nulla iaculis lectus, ut adipiscing lorem sapien ut odio. Phasellus varius. Nunc placerat rhoncus justo.
-    </p>
+    
+      <!-- Container for tweets -->
+      <section class="tweets-container">
+    
+        <article class="tweet">
+            <div class="user-info">
+              <img src="http://localhost:8080/images/profile-hex.png" alt="Avatar" class="avatar">
+              <h3 class="username">Rhoda Jacobs</h3>
+              <p class="handle">@MsJacobs</p>
+            </div>
+
+          <div class="tweet-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <hr>
+          <footer>
+            <p class="tweet-time">Posted 2 hours ago</p>
+            <div class="tweet-icons">
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-flag"></i>
+            </div>
+          </footer>
+        </article>
+    
+      </section>
     </main>
+
   </body>
 </html>
