@@ -9,13 +9,13 @@ $(document).ready(function() {
     const tweetContent = $(this).find('textarea').val().trim();
 
     if (!tweetContent) {
-        alert('Cannot post an empty tweet!');
-        return false; 
+      $('.error-message').text('⚠ Cannot post an empty tweet! ⚠').slideDown();
+      return false; 
     }
 
 
     if (tweetContent.length > 140) {
-        alert('Cannot post a tweet with over 140 characters');
+        $('.error-message').text('⚠ Cannot post a tweet with over 140 characters ⚠').slideDown();
         return false; 
     }
 
@@ -26,7 +26,6 @@ $(document).ready(function() {
         data: formData
     })
     .done(function(response) {
-      const $tweet = createTweetElement(response); 
       $('textarea').val('');
       loadTweets();
     })
