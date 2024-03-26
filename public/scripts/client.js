@@ -18,6 +18,7 @@ $(document).ready(function() {
         $('.error-message').text('⚠ Cannot post a tweet with over 140 characters ⚠').slideDown();
         return false; 
     }
+    clearError();
 
     const formData = $(this).serialize();
     $.ajax({
@@ -33,6 +34,22 @@ $(document).ready(function() {
         console.error('tweet cannot be posted', error);
     });
   });
+
+  $('textarea').on('input', function() {
+    clearError();
+  });
+
+
+    function showError(message) {
+      const $errorMessage = $('.error-message');
+      $errorMessage.text(message).slideDown();
+    }
+  
+
+    function clearError() {
+      const $errorMessage = $('.error-message');
+      $errorMessage.slideUp();
+    }
   
 
     function createTweetElement(tweetData) {
