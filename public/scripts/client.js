@@ -6,6 +6,19 @@
 $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
+    const tweetContent = $(this).find('textarea').val().trim();
+
+    if (!tweetContent) {
+        alert('Cannot post an empty tweet!');
+        return; 
+    }
+
+
+    if (tweetContent.length > 140) {
+        alert('Cannot post a tweet with over 140 characters');
+        return; 
+    }
+
     const formData = $(this).serialize();
     $.ajax({
         url: '/tweets/',
