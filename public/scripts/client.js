@@ -4,6 +4,22 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  $('form').submit(function(event) {
+    event.preventDefault();
+    const formData = $(this).serialize();
+    $.ajax({
+        url: '/tweets/',
+        method: 'POST',
+        data: formData
+    })
+    .done(function(response) {
+        renderTweets([response]);
+    })
+    .fail(function(error) {
+        console.error('tweet cannot be posted', error);
+    });
+  });
+  
 
     function createTweetElement(tweetData) {
       const $tweet = $(`
@@ -34,12 +50,12 @@ $(document).ready(function() {
   
 
 
-    function renderTweets(tweets) {
-        tweets.forEach(tweet => {
-            const $tweet = createTweetElement(tweet);
-            $('.tweets-container').append($tweet);
-        });
-    }
+  function renderTweets(tweets) {
+    tweets.forEach(tweet => {
+        const $tweet = createTweetElement(tweet);
+        $('.tweets-container').prepend($tweet);
+    });
+}
 
 
     const data = [
@@ -69,3 +85,4 @@ $(document).ready(function() {
     
     renderTweets(data);
 });
+
