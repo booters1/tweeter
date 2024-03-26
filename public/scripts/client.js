@@ -47,7 +47,20 @@ $(document).ready(function() {
   
       return $tweet;
   }
-  
+
+  function loadTweets() {
+    $.ajax({
+        url: '/tweets',
+        method: 'GET',
+        dataType: 'json',
+        success: function(tweets) {
+            renderTweets(tweets);
+        },
+        error: function(error) {
+            console.error('tweet cannot be loaded', error);
+        }
+    });
+}
 
 
   function renderTweets(tweets) {
@@ -55,6 +68,7 @@ $(document).ready(function() {
         const $tweet = createTweetElement(tweet);
         $('.tweets-container').prepend($tweet);
     });
+    timeago().render(document.querySelectorAll('.tweet-time'));
 }
 
 
