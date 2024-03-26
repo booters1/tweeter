@@ -10,13 +10,13 @@ $(document).ready(function() {
 
     if (!tweetContent) {
         alert('Cannot post an empty tweet!');
-        return; 
+        return false; 
     }
 
 
     if (tweetContent.length > 140) {
         alert('Cannot post a tweet with over 140 characters');
-        return; 
+        return false; 
     }
 
     const formData = $(this).serialize();
@@ -26,8 +26,9 @@ $(document).ready(function() {
         data: formData
     })
     .done(function(response) {
-        renderTweets([response]);
-        $('textarea').val('');
+      const $tweet = createTweetElement(response); 
+      $('.tweets-container').prepend($tweet); 
+      $('textarea').val('');
     })
     .fail(function(error) {
         console.error('tweet cannot be posted', error);
@@ -85,6 +86,7 @@ $(document).ready(function() {
     });
     timeago().render(document.querySelectorAll('.tweet-time'));
 }
+
     
     loadTweets();
 });
