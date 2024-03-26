@@ -27,8 +27,8 @@ $(document).ready(function() {
     })
     .done(function(response) {
       const $tweet = createTweetElement(response); 
-      $('.tweets-container').prepend($tweet); 
       $('textarea').val('');
+      loadTweets();
     })
     .fail(function(error) {
         console.error('tweet cannot be posted', error);
