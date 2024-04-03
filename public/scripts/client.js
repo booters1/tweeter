@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  loadTweets();
   $('form').submit(function(event) {
     event.preventDefault();
     const tweetContent = $(this).find('textarea').val().trim();
@@ -38,14 +39,7 @@ $(document).ready(function() {
   $('textarea').on('input', function() {
     clearError();
   });
-
-
-    function showError(message) {
-      const $errorMessage = $('.error-message');
-      $errorMessage.text(message).slideDown();
-    }
-  
-
+  p-[p]
     function clearError() {
       const $errorMessage = $('.error-message');
       $errorMessage.slideUp();
@@ -102,8 +96,5 @@ $(document).ready(function() {
     });
     timeago().render(document.querySelectorAll('.tweet-time'));
 }
-
-    
-    loadTweets();
 });
 

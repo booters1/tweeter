@@ -1,5 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  padding-left: 75px;
+}
+
 .new-tweet {
-  text-align: left;
+  display: flex;
+  flex-direction: column; 
+  width: 120%; 
 }
 
 .new-tweet textarea {
@@ -37,6 +47,7 @@
 }
 
 .tweets-container {
+  width: 120%;
   display: flex;
   flex-direction: column;
 }
@@ -109,5 +120,40 @@
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 10px;
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+  body {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+  }
+
+  .tweets-container {
+    max-width:fit-content 
+  }
+  
+  .new-tweet {
+    width: 100%;
+    
+  }
+
+  nav {
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png"); 
+    background-color: #4056A1;
+    
+  }
+
+  header {
+    width: 100%; 
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png"); 
+    background-color: #4056A1;
+    margin-top: 100px;
+
+  }
+
 
 }
