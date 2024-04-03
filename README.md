@@ -20,5 +20,7 @@ Project Features: Tweeter allows users to compose and post tweets, and view twee
   "chance": "^1.1.11",
   "express": "^4.19.2",
   "md5": "^2.3.0"
+  Express
+  Node 5.10.x or above
 
 
