@@ -24,3 +24,5 @@ Project Features: Tweeter allows users to compose and post tweets, and view twee
   Node 5.10.x or above
 
 
+## Screenshots
+[!Screenshot of Final Product](https://github.com/booters1/tweeter/blob/master/docs/tweeter-final.png?raw=true)
