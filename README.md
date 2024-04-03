@@ -11,8 +11,9 @@ Project Features: Tweeter allows users to compose and post tweets, and view twee
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
 2. Clone your repository onto your local device. (SSH: git@github.com:booters1/tweeter.git)
 3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+5. Go to <http://localhost:8080/> in your browser.
+6. Type in tweets and hit "TWEET" button to post.
 
 ## Dependencies
 
