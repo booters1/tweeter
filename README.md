@@ -25,8 +25,11 @@ Project Features: Tweeter allows users to compose and post tweets, and view twee
 
 
 ## Screenshots
-
+Individual Tweets
 !["Screenshot of Individual Tweets"](https://github.com/booters1/tweeter/blob/master/docs/tweeter-individual-tweet.png?raw=true)
+Text Input Form
 !["Screenshot of text input form"](https://github.com/booters1/tweeter/blob/master/docs/tweeter-input.png?raw=true)
-!["Screenshot of Final Product at a smaller resolution"](https://github.com/booters1/tweeter/blob/master/docs/tweeter-at-smaller-res.png?raw=true)
+Final Product (1024px width - smaller resolution)
+!["Screenshot of Final Product smaller resolution"](https://github.com/booters1/tweeter/blob/master/docs/tweeter-at-smaller-res.png?raw=true)
+Final Product (full resolution)
 !["Screenshot of Final Product"](https://github.com/booters1/tweeter/blob/master/docs/tweeter-final.png?raw=true)
