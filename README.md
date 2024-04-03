@@ -25,5 +25,5 @@ Project Features: Tweeter allows users to compose and post tweets, and view twee
 
 
 ## Screenshots
-[!Screenshot of Final Product](https://github.com/booters1/tweeter/blob/master/docs/tweeter-final.png?raw=true)
-[!Screenshot of Final Product at a smaller resolution](https://github.com/booters1/tweeter/blob/master/docs/tweeter-at-smaller-res.png?raw=true)
+!["Screenshot of Final Product"](https://github.com/booters1/tweeter/blob/master/docs/tweeter-final.png?raw=true)
+!["Screenshot of Final Product at a smaller resolution"](https://github.com/booters1/tweeter/blob/master/docs/tweeter-at-smaller-res.png?raw=true)
