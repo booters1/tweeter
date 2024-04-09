@@ -47,32 +47,33 @@ $(document).ready(function() {
     }
   
 
-    function createTweetElement(tweetData) {
-      const $tweet = $(`
-          <article class="tweet">
-                  <div class="user-info">
-                      <img src="${tweetData.user.avatars}" alt="Avatar" class="avatar">
-                      <div class="user-details">
-                          <h3 class="username">${tweetData.user.name}</h3>
-                          <p class="handle">${tweetData.user.handle}</p>
-                      </div>
-                  </div>
-              <section class="tweet-content">
-                  <p>${tweetData.content.text}</p>
-              </section>
-              <footer>
-                  <p class="tweet-time">${timeago.format(tweetData.created_at)}</p>
-                  <div class="tweet-icons">
-                      <i class="fa-solid fa-retweet"></i>
-                      <i class="fa-solid fa-heart"></i>
-                      <i class="fa-solid fa-flag"></i>
-                  </div>
-              </footer>
-          </article>
-      `);
-  
-      return $tweet;
-  }
+function createTweetElement(tweetData) {
+  const $tweet = $(`
+      <article class="tweet">
+          <div class="user-info">
+
+              <div class="user-details">
+              <img src="${tweetData.user.avatars}" alt="Avatar" class="avatar">
+                  <h3 class="username">${tweetData.user.name}</h3>
+              </div>
+              <p class="handle">${tweetData.user.handle}</p>
+          </div>
+          <section class="tweet-content">
+              <p>${tweetData.content.text}</p>
+          </section>
+          <footer>
+              <p class="tweet-time">${timeago.format(tweetData.created_at)}</p>
+              <div class="tweet-icons">
+                  <i class="fa-solid fa-retweet"></i>
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-flag"></i>
+              </div>
+          </footer>
+      </article>
+  `);
+
+  return $tweet;
+}
 
   function loadTweets() {
     $.ajax({

@@ -86,19 +86,27 @@ article.tweet:hover {
 
 
 .user-info {
+  align-items: center;
   display: flex;
+  justify-content: space-between;
+}
+
+.user-details {
+  display: flex; 
   align-items: center;
 }
 
+
 .user-info h3 {
   margin: 0;
+  margin-right: auto;
 }
 
 .user-info p {
   margin: 0;
-  margin-left: auto;
   font-style: italic;
   color: #888;
+  margin-left: auto;
 }
 
 .tweet-content {
