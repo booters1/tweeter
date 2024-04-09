@@ -99,14 +99,12 @@ article.tweet:hover {
 
 .user-info h3 {
   margin: 0;
-  margin-right: auto;
 }
 
 .user-info p {
   margin: 0;
   font-style: italic;
   color: #888;
-  margin-left: auto;
 }
 
 .tweet-content {
