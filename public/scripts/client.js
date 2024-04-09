@@ -28,7 +28,8 @@ $(document).ready(function() {
         data: formData
     })
     .done(function(response) {
-      $('textarea').val(''); // clearing text area after tweet is posted
+      $('textarea').val(''); 
+      $('textarea').trigger('input');
       loadTweets();
     })
     .fail(function(error) {

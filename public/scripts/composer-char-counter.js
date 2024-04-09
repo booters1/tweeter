@@ -1,6 +1,6 @@
 //reference: https://stackoverflow.com/a/7934560
 $(document).ready(function() {
-  $(".new-tweet textarea").on("input", function() {
+  function updateCounter() {
     //retrieve length of ea line
 
     var inputLength = $(this).val().length;
@@ -13,5 +13,15 @@ $(document).ready(function() {
     } else {
       counter.removeClass("over-limit");
     }
+  }
+
+
+  $(".new-tweet textarea").on("input", updateCounter);
+
+
+  $(".new-tweet form").on("submit", function(event) {
+    event.preventDefault();
+    var textarea = $(this).find("textarea");
+    updateCounter.call(textarea);
   });
 });
